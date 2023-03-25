@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const About = () => {
   return (
     <div className="sm:px-8 mt-16 sm:mt-32">
@@ -7,8 +9,8 @@ const About = () => {
             <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
               <div className="lg:pl-20">
                 <div className="max-w-xs px-2.5 lg:max-w-none">
-                  <img
-                    src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&w=640&q=75"
+                  <Image
+                    src="/portrait.webp"
                     alt=""
                     sizes="(min-width: 1024px) 32rem, 20rem"
                     width={800}
@@ -60,10 +62,10 @@ const About = () => {
                   <p>
                     In short, I am a full stack web developer who is passionate
                     about delivering high-quality and user-centric web
-                    applications. Whether it's working on a new project from
-                    scratch or enhancing an existing one, I am always looking
-                    for ways to push the boundaries of what's possible with web
-                    development.
+                    applications. Whether it&apos;s working on a new project
+                    from scratch or enhancing an existing one, I am always
+                    looking for ways to push the boundaries of what&apos;s
+                    possible with web development.
                   </p>
                 </div>
               </div>
