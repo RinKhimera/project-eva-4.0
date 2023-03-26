@@ -2,13 +2,13 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IoSunnyOutline } from "react-icons/io5";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsMoonStars } from "react-icons/bs";
 
 interface toggleDarkMode {
-  isToggleOn: boolean;
-  onToggle: React.MouseEventHandler<HTMLButtonElement>;
+  darkMode: boolean;
+  setDarkMode: React.MouseEventHandler<HTMLButtonElement>;
 }
-const NavBar = ({ isToggleOn, onToggle }: toggleDarkMode) => {
+const NavBar = ({ darkMode, setDarkMode }: toggleDarkMode) => {
   return (
     <>
       <header
@@ -44,7 +44,7 @@ const NavBar = ({ isToggleOn, onToggle }: toggleDarkMode) => {
                     <div className="flex flex-1 justify-end md:justify-center">
                       <div className="pointer-events-auto md:hidden">
                         <button
-                          className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
+                          className="group flex items-center rounded-full ${myName} bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
                           type="button"
                           aria-expanded="false"
                           id="headlessui-popover-button-:R2qb6:"
@@ -56,16 +56,16 @@ const NavBar = ({ isToggleOn, onToggle }: toggleDarkMode) => {
                         <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
                           <li>
                             <a
-                              className="relative block px-3 py-2 transition text-teal-500 dark:text-teal-400"
+                              className="relative block px-3 py-2 transition text-pink-600 dark:text-pink-600"
                               href="/about"
                             >
                               About
-                              <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>
+                              <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-500/0 via-pink-500/40 to-pink-500/0 dark:from-pink-400/0 dark:via-pink-400/40 dark:to-pink-400/0"></span>
                             </a>
                           </li>
                           <li>
                             <a
-                              className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                              className="relative block  px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600"
                               href="/articles"
                             >
                               Skills
@@ -73,7 +73,7 @@ const NavBar = ({ isToggleOn, onToggle }: toggleDarkMode) => {
                           </li>
                           <li>
                             <a
-                              className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                              className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600"
                               href="/projects"
                             >
                               Projects
@@ -81,7 +81,7 @@ const NavBar = ({ isToggleOn, onToggle }: toggleDarkMode) => {
                           </li>
                           <li>
                             <a
-                              className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                              className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600"
                               href="/speaking"
                             >
                               Contact
@@ -95,10 +95,14 @@ const NavBar = ({ isToggleOn, onToggle }: toggleDarkMode) => {
                         <button
                           type="button"
                           aria-label="Toggle dark mode"
-                          onClick={onToggle}
-                          className="group text-2xl text-pink-400 hover:text-pink-600 rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                          onClick={setDarkMode}
+                          className="group  text-pink-400 hover:text-pink-600 rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                         >
-                          <IoSunnyOutline />
+                          {darkMode ? (
+                            <BsMoonStars className="text-lg m-0.5" />
+                          ) : (
+                            <IoSunnyOutline className="text-2xl" />
+                          )}
                         </button>
                       </div>
                     </div>
