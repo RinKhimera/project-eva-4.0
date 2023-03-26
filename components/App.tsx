@@ -1,7 +1,13 @@
+import { useState } from "react";
 import NavBar from "@/components/NavBar";
 import About from "@/components/About";
 
-const App = () => {
+interface DarkMode {
+  isDarkMode: boolean;
+  setDarkMode: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const App = ({ isDarkMode, setDarkMode }: DarkMode) => {
   return (
     <div className="flex h-full flex-col bg-zinc-50 dark:bg-black">
       <div className="fixed inset-0 flex justify-center sm:px-8">
@@ -10,7 +16,7 @@ const App = () => {
         </div>
       </div>
       <div className="relative">
-        <div className=""></div>
+        <NavBar isToggleOn={isDarkMode} onToggle={setDarkMode} />
         <About />
       </div>
     </div>
