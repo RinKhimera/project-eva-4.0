@@ -1,4 +1,4 @@
-import About from "@/components/About";
+/*import About from "@/components/About";
 
 interface DarkMode {
   isDarkMode: boolean;
@@ -20,4 +20,4 @@ const App = ({ isDarkMode, setIsDarkMode }: DarkMode) => {
   );
 };
 
-export default App;
+export default App;*/
