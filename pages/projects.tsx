@@ -1,11 +1,13 @@
 import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import { useSelector } from "react-redux";
-import type { RootState } from "@/pages/store";
+import { RootState } from "./store";
+import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import Head from "next/head";
 
-const About = () => {
+const Projects = () => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
   );
@@ -161,5 +163,4 @@ const About = () => {
     </div>
   );
 };
-
-export default About;
+export default Projects;

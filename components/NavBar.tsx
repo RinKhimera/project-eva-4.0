@@ -142,28 +142,25 @@ const NavBar = () => {
                             </Link>
                           </li>
                           <li>
-                            <a
-                              className="relative block  px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600"
-                              href="/articles"
-                            >
-                              Skills
-                            </a>
+                            <Link href="/skills" legacyBehavior>
+                              <a className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600">
+                                Skills
+                              </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600"
-                              href="/projects"
-                            >
-                              Projects
-                            </a>
+                            <Link href="/projects" legacyBehavior>
+                              <a className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600">
+                                Projects
+                              </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600"
-                              href="/speaking"
-                            >
-                              Contact
-                            </a>
+                            <Link href="/contact" legacyBehavior>
+                              <a className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600">
+                                Contact
+                              </a>
+                            </Link>
                           </li>
                         </ul>
                       </nav>
