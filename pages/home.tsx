@@ -1,5 +1,7 @@
 import NavBar from "@/components/NavBar";
+import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const HomeMenu = () => {
   return (
@@ -21,7 +23,7 @@ const HomeMenu = () => {
                       Software engineer, web developer, and JavaScript
                       enthusiast
                     </h1>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                    <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
                       I&apos;m Samuel, a full-stack developer passionate about
                       creating high-quality and innovative digital solutions.
                       With expertise in various programming languages,
@@ -29,6 +31,14 @@ const HomeMenu = () => {
                       delivering responsive, user-friendly, and aesthetically
                       pleasing websites.
                     </p>
+                    <div className="mt-6  ">
+                      <Link href="/about" legacyBehavior>
+                        <a className="hover:underline flex items-center text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">
+                          Let me introduce myself{" "}
+                          <MdOutlineKeyboardDoubleArrowRight className="ml-4 -mb-1" />
+                        </a>
+                      </Link>
+                    </div>
                     <div className="mt-6 flex gap-6">
                       <a
                         href="https://www.linkedin.com/in/samuel-pokam/"
