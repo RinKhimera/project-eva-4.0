@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import Footer from "./Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
@@ -14,7 +15,7 @@ const HomeMenu = () => {
       </div>
       <div className="relative">
         <NavBar />
-        <div className="">
+        <main>
           <div className="sm:px-8 mt-9 pt-20 ">
             <div className="mx-auto max-w-7xl lg:px-8">
               <div className="relative px-4 sm:px-8 lg:px-12">
@@ -132,7 +133,8 @@ const HomeMenu = () => {
             </div>
           </div>
           <div className="sm:px-8 mt-24 md:mt-28"></div>
-        </div>
+        </main>
+        <Footer />
       </div>
     </div>
   );

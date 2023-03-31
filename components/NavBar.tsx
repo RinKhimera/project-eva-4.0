@@ -8,7 +8,14 @@ import { IoSunnyOutline } from "react-icons/io5";
 import { BsMoonStars } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 
-const NavBar = () => {
+interface Section {
+  about: boolean;
+  skills: boolean;
+  projects: boolean;
+  contact: boolean;
+}
+
+const NavBar = ({ about, skills, projects, contact }: Section) => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
   );
@@ -24,13 +31,7 @@ const NavBar = () => {
   };
   return (
     <>
-      <header
-        className="pointer-events-none relative z-50 flex flex-col"
-        style={{
-          height: "var(--header-height)",
-          marginBottom: "var(--header-mb)",
-        }}
-      >
+      <header className="pointer-events-none relative z-50 flex flex-col">
         <div className="top-0 z-10 h-16 pt-6">
           <div className="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full">
             <div className="mx-auto max-w-7xl lg:px-8">
@@ -135,30 +136,65 @@ const NavBar = () => {
                         <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
                           <li>
                             <Link href="/about" legacyBehavior>
-                              <a className="relative block px-3 py-2 transition text-pink-600 dark:text-pink-600">
+                              <a
+                                className={`relative block px-3 py-2 transition ${
+                                  about
+                                    ? "text-pink-600 dark:text-pink-500"
+                                    : "hover:text-pink-600 dark:hover:text-pink-500"
+                                }`}
+                              >
                                 About
-                                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-500/0 via-pink-500/40 to-pink-500/0 dark:from-pink-400/0 dark:via-pink-400/40 dark:to-pink-400/0"></span>
+                                {about && (
+                                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-500/0 via-pink-500/40 to-pink-500/0 dark:from-pink-400/0 dark:via-pink-400/40 dark:to-pink-400/0"></span>
+                                )}
                               </a>
                             </Link>
                           </li>
                           <li>
                             <Link href="/skills" legacyBehavior>
-                              <a className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600">
+                              <a
+                                className={`relative block px-3 py-2 transition ${
+                                  skills
+                                    ? "text-pink-600 dark:text-pink-500"
+                                    : "hover:text-pink-600 dark:hover:text-pink-500"
+                                }`}
+                              >
                                 Skills
+                                {skills && (
+                                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-500/0 via-pink-500/40 to-pink-500/0 dark:from-pink-400/0 dark:via-pink-400/40 dark:to-pink-400/0"></span>
+                                )}
                               </a>
                             </Link>
                           </li>
                           <li>
                             <Link href="/projects" legacyBehavior>
-                              <a className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600">
+                              <a
+                                className={`relative block px-3 py-2 transition ${
+                                  projects
+                                    ? "text-pink-600 dark:text-pink-500"
+                                    : "hover:text-pink-600 dark:hover:text-pink-500"
+                                }`}
+                              >
                                 Projects
+                                {projects && (
+                                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-500/0 via-pink-500/40 to-pink-500/0 dark:from-pink-400/0 dark:via-pink-400/40 dark:to-pink-400/0"></span>
+                                )}
                               </a>
                             </Link>
                           </li>
                           <li>
                             <Link href="/contact" legacyBehavior>
-                              <a className="relative block px-3 py-2 transition hover:text-pink-600 dark:hover:text-pink-600">
+                              <a
+                                className={`relative block px-3 py-2 transition ${
+                                  contact
+                                    ? "text-pink-600 dark:text-pink-500"
+                                    : "hover:text-pink-600 dark:hover:text-pink-500"
+                                }`}
+                              >
                                 Contact
+                                {contact && (
+                                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-pink-500/0 via-pink-500/40 to-pink-500/0 dark:from-pink-400/0 dark:via-pink-400/40 dark:to-pink-400/0"></span>
+                                )}
                               </a>
                             </Link>
                           </li>
