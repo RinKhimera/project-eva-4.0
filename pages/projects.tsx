@@ -15,7 +15,7 @@ const Projects = () => {
   return (
     <div className={isDarkMode ? "dark" : ""}>
       <Head>
-        <title>Samuel Pokam</title>
+        <title>Projects - Samuel Pokam</title>
         <meta name="description" content="Samuel Pokam - Portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

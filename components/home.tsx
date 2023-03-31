@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import Image from "next/image";
 import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
@@ -70,7 +71,66 @@ const HomeMenu = () => {
               </div>
             </div>
           </div>
-          <div className="mt-16 sm:mt-20"></div>
+          <div className="mt-16 sm:mt-20">
+            <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+              <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
+                <Image
+                  src="/image-1.webp"
+                  alt={""}
+                  width={3744}
+                  height={5616}
+                  decoding="async"
+                  data-nimg="1"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
+                  <Image
+                    src="/image-2.webp"
+                    alt={""}
+                    width={3744}
+                    height={5616}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
+                  <Image
+                    src="/image-3.webp"
+                    alt={""}
+                    width={3744}
+                    height={5616}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
+                  <Image
+                    src="/image-4.webp"
+                    alt={""}
+                    width={3744}
+                    height={5616}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
+                  <Image
+                    src="/image-5.webp"
+                    alt={""}
+                    width={3744}
+                    height={5616}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="sm:px-8 mt-24 md:mt-28"></div>
         </div>
       </div>

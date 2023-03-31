@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div className={isDarkMode ? "dark" : ""}>
       <Head>
-        <title>Samuel Pokam</title>
+        <title>About - Samuel Pokam</title>
         <meta name="description" content="Samuel Pokam - Portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -41,8 +41,8 @@ const About = () => {
                           height={800}
                           decoding="async"
                           data-nimg="1"
-                          className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
                           loading="lazy"
+                          className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
                         />
                       </div>
                     </div>
@@ -84,10 +84,6 @@ const About = () => {
                           with databases to store and retrieve data. I also pay
                           attention to security and best practices to ensure
                           that my applications are safe from potential attacks.
-                          With a focus on creating well-structured and
-                          maintainable code, I strive to create back-end systems
-                          that enable seamless communication with the front-end
-                          and provide a smooth user experience.
                         </p>
                       </div>
                     </div>

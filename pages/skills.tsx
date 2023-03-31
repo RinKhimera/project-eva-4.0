@@ -4,6 +4,7 @@ import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
+import Head from "next/head";
 
 const HomeMenu = () => {
   const isDarkMode = useSelector(
@@ -12,6 +13,12 @@ const HomeMenu = () => {
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
+      <Head>
+        <title>Skills - Samuel Pokam</title>
+        <meta name="description" content="Samuel Pokam - Portfolio website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="flex h-full flex-col bg-zinc-50 dark:bg-black min-h-screen">
         <div className="fixed inset-0 flex justify-center sm:px-8">
           <div className="flex w-full max-w-7xl lg:px-8">
