@@ -6,6 +6,7 @@ import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
+import Image from "next/image";
 
 const HomeMenu = () => {
   const isDarkMode = useSelector(
@@ -51,7 +52,173 @@ const HomeMenu = () => {
                         and contribute if you have ideas for how it can be
                         improved.
                       </p>
-                      <div className="mt-16 sm:mt-20"></div>
+                    </div>
+                    <div className="mt-16 sm:mt-20">
+                      <ul
+                        role="list"
+                        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+                      >
+                        <li className="group relative flex flex-col items-start p-5 rounded-2xl bg-red-200">
+                          <div className="relative z-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-0">
+                            <Image
+                              className="rounded-lg"
+                              src="/projects/350x150.png"
+                              alt="Project Image"
+                              width={350}
+                              height={150}
+                            />
+                          </div>
+                          <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                            Project Name
+                          </h2>
+                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                            This is a short description of the project. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <div className="w-full px-2 py-6 flex justify-between">
+                            <a
+                              href="#"
+                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              Demo
+                            </a>
+                            <a
+                              href="#"
+                              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              GitHub
+                            </a>
+                          </div>
+                        </li>
+                        <li className="group relative flex flex-col items-start p-5 bg-red-200">
+                          <div className="relative z-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-0">
+                            <Image
+                              className="rounded-lg"
+                              src="/projects/350x150.png"
+                              alt="Project Image"
+                              width={350}
+                              height={150}
+                            />
+                          </div>
+                          <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                            Project Name
+                          </h2>
+                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                            This is a short description of the project. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <div className="w-full px-2 py-6 flex justify-between">
+                            <a
+                              href="#"
+                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              Demo
+                            </a>
+                            <a
+                              href="#"
+                              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              GitHub
+                            </a>
+                          </div>
+                        </li>
+                        <li className="group relative flex flex-col items-start p-5 bg-red-200">
+                          <div className="relative z-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-0">
+                            <Image
+                              className="rounded-lg"
+                              src="/projects/350x150.png"
+                              alt="Project Image"
+                              width={350}
+                              height={150}
+                            />
+                          </div>
+                          <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                            Project Name
+                          </h2>
+                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                            This is a short description of the project. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <div className="w-full px-2 py-6 flex justify-between">
+                            <a
+                              href="#"
+                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              Demo
+                            </a>
+                            <a
+                              href="#"
+                              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              GitHub
+                            </a>
+                          </div>
+                        </li>
+                        <li className="group relative flex flex-col items-start p-5 bg-red-200">
+                          <div className="relative z-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-0">
+                            <Image
+                              className="rounded-lg"
+                              src="/projects/350x150.png"
+                              alt="Project Image"
+                              width={350}
+                              height={150}
+                            />
+                          </div>
+                          <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                            Project Name
+                          </h2>
+                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                            This is a short description of the project. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <div className="w-full px-2 py-6 flex justify-between">
+                            <a
+                              href="#"
+                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              Demo
+                            </a>
+                            <a
+                              href="#"
+                              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              GitHub
+                            </a>
+                          </div>
+                        </li>
+                        <li className="group relative flex flex-col items-start p-5 bg-red-200">
+                          <div className="relative z-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-0">
+                            <Image
+                              className="rounded-lg"
+                              src="/projects/350x150.png"
+                              alt="Project Image"
+                              width={350}
+                              height={150}
+                            />
+                          </div>
+                          <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                            Project Name
+                          </h2>
+                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                            This is a short description of the project. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <div className="w-full px-2 py-6 flex justify-between">
+                            <a
+                              href="#"
+                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              Demo
+                            </a>
+                            <a
+                              href="#"
+                              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                              GitHub
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>

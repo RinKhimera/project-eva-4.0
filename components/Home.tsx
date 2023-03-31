@@ -14,7 +14,7 @@ const HomeMenu = () => {
         </div>
       </div>
       <div className="relative">
-        <NavBar />
+        <NavBar about={false} skills={false} projects={false} contact={false} />
         <main>
           <div className="sm:px-8 mt-9 pt-20 ">
             <div className="mx-auto max-w-7xl lg:px-8">
