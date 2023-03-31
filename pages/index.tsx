@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomeMenu from "@/components/Home";
+import HomeMenu from "../components/Home";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/pages/store";
 
