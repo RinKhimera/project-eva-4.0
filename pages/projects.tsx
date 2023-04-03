@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
+import { AiFillGithub, AiFillEye } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
 import Image from "next/image";
@@ -83,7 +83,7 @@ const HomeMenu = () => {
             contact={false}
           />
           <main>
-            <div className="sm:px-8 mt-16 sm:mt-32">
+            <div className="sm:px-8 mt-16 sm:mt-28">
               <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="relative px-4 sm:px-8 lg:px-12">
                   <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -92,7 +92,7 @@ const HomeMenu = () => {
                         Things I&apos;ve made trying to put my dent in the
                         universe.
                       </p>
-                      <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+                      <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
                         I&apos;ve worked on tons of little projects over the
                         years but these are the ones that I&apos;m most proud
                         of. Many of them are open-source, so if you see
@@ -128,16 +128,22 @@ const HomeMenu = () => {
                             </p>
                             <div className="w-full py-6 flex justify-between">
                               <a
-                                href={project.demoLink}
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                href={project.githubLink}
+                                target="_blank"
+                                rel="noreferrer"
                               >
-                                Demo
+                                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                                  <AiFillGithub className="w-8 h-8 text-zinc-600 dark:text-zinc-400" />
+                                </div>
                               </a>
                               <a
-                                href={project.githubLink}
-                                className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                                href={project.demoLink}
+                                target="_blank"
+                                rel="noreferrer"
                               >
-                                GitHub
+                                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                                  <AiFillEye className="w-8 h-8 text-zinc-600 dark:text-zinc-400" />
+                                </div>
                               </a>
                             </div>
                           </li>
