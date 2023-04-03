@@ -126,7 +126,7 @@ const HomeMenu = () => {
                             <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                               {project.description}
                             </p>
-                            <div className="w-full py-6 flex justify-between">
+                            <div className="w-full py-4 flex justify-evenly">
                               <a
                                 href={project.githubLink}
                                 target="_blank"
