@@ -6,7 +6,6 @@ import javascript from "../public/assets/javascript.svg";
 import typescript from "../public/assets/typescript.svg";
 import react from "../public/assets/react.svg";
 import redux from "../public/assets/redux.svg";
-import next from "../public/assets/next.svg";
 import tailwindcss from "../public/assets/tailwindcss.svg";
 import bootstrap from "../public/assets/bootstrap.svg";
 import sass from "../public/assets/sass.svg";
@@ -19,7 +18,7 @@ import adobexd from "../public/assets/adobexd.svg";
 import figma from "../public/assets/figma.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
-import { SiExpress, SiNextdotjs } from "react-icons/si";
+import { SiExpress, SiNextdotjs, SiPrisma } from "react-icons/si";
 
 const Projects = () => {
   const isDarkMode = useSelector(
@@ -28,49 +27,49 @@ const Projects = () => {
 
   const frontendIcons = [
     {
-      href: "#",
+      href: "https://www.javascript.com/",
       icon: <Image src={javascript} alt={""} className="w-7 h-7" />,
       name: "JavaScript",
     },
     {
-      href: "#",
+      href: "https://www.typescriptlang.org/",
       icon: <Image src={typescript} alt={""} className="w-7 h-7" />,
       name: "TypeScript",
     },
     {
-      href: "#",
+      href: "https://react.dev/",
       icon: <Image src={react} alt={""} className="w-8 h-8" />,
       name: "React",
     },
     {
-      href: "#",
+      href: "https://redux.js.org/",
       icon: <Image src={redux} alt={""} className="w-8 h-8" />,
       name: "Redux",
     },
     {
-      href: "#",
+      href: "https://nextjs.org/",
       icon: (
         <SiNextdotjs className="w-9 h-9 text-zinc-600 dark:text-zinc-400" />
       ),
       name: "Next.js",
     },
     {
-      href: "#",
+      href: "https://tailwindcss.com/",
       icon: <Image src={tailwindcss} alt={""} className="w-8 h-8" />,
       name: "TailwindCSS",
     },
     {
-      href: "#",
+      href: "https://getbootstrap.com/",
       icon: <Image src={bootstrap} alt={""} className="w-9 h-9" />,
       name: "Bootstrap",
     },
     {
-      href: "#",
+      href: "https://sass-lang.com/",
       icon: <Image src={sass} alt={""} className="w-9 h-9" />,
       name: "Sass",
     },
     {
-      href: "#",
+      href: "https://d3js.org/",
       icon: <Image src={d3} alt={""} className="w-8 h-8" />,
       name: "D3.js",
     },
@@ -78,40 +77,45 @@ const Projects = () => {
 
   const backendIcons = [
     {
-      href: "#",
+      href: "https://nodejs.org/en",
       icon: <Image src={node} alt={""} className="w-8 h-8" />,
       name: "Node.js",
     },
     {
-      href: "#",
+      href: "https://expressjs.com/",
       icon: <SiExpress className="w-9 h-9 text-zinc-600 dark:text-zinc-400" />,
       name: "Express.js",
     },
     {
-      href: "#",
+      href: "https://www.mongodb.com/",
       icon: <Image src={mongodb} alt={""} className="w-10 h-10" />,
       name: "MongoDB",
     },
     {
-      href: "#",
+      href: "https://www.postgresql.org/",
       icon: <Image src={postgresql} alt={""} className="w-8 h-8" />,
       name: "PostgreSQL",
     },
     {
-      href: "#",
+      href: "https://graphql.org/",
       icon: <Image src={graphql} alt={""} className="w-8 h-8" />,
       name: "GraphQL",
+    },
+    {
+      href: "https://www.prisma.io/",
+      icon: <SiPrisma className="w-8 h-8 text-zinc-600 dark:text-zinc-400" />,
+      name: "Prisma",
     },
   ];
 
   const designIcons = [
     {
-      href: "#",
+      href: "https://www.figma.com/",
       icon: <Image src={figma} alt={""} className="w-8 h-8" />,
       name: "Figma",
     },
     {
-      href: "#",
+      href: "https://helpx.adobe.com/xd/get-started.html",
       icon: <Image src={adobexd} alt={""} className="w-8 h-8" />,
       name: "AdobeXD",
     },

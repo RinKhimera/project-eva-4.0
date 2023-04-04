@@ -14,13 +14,13 @@ const HomeMenu = () => {
 
   const projects = [
     {
-      name: "Project 1",
-      imageSrc: "/projects/350x150.png",
+      name: "Manage",
+      imageSrc: "/projects/project1.jpg",
       imageAlt: "Project Image",
       description:
-        "This is a short description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      demoLink: "#",
-      githubLink: "#",
+        "A landing page for a business website with hero section, CTA button, testimonials and navigation links",
+      demoLink: "https://rinkhimera.github.io/manage-landing-page/",
+      githubLink: "https://github.com/RinKhimera/manage-landing-page",
     },
     {
       name: "Project 2",
@@ -111,13 +111,13 @@ const HomeMenu = () => {
                             key={project.name}
                             className="group relative flex flex-col items-start p-5 rounded-2xl transition hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
                           >
-                            <div className="relative mt-5 z-10 flex items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-0">
+                            <div>
                               <Image
                                 className="rounded-lg"
                                 src={project.imageSrc}
                                 alt={project.imageAlt}
-                                width={350}
-                                height={150}
+                                width={1920}
+                                height={1080}
                               />
                             </div>
                             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
