@@ -14,11 +14,11 @@ const HomeMenu = () => {
 
   const projects = [
     {
-      name: "Manage",
+      name: "Modern UI/UX Webpage",
       imageSrc: "/projects/project1.jpg",
       imageAlt: "Project Image",
       description:
-        "A landing page for a business website with hero section, CTA button, testimonials and navigation links",
+        "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links",
       demoLink: "https://rinkhimera.github.io/manage-landing-page/",
       githubLink: "https://github.com/RinKhimera/manage-landing-page",
     },
@@ -113,7 +113,7 @@ const HomeMenu = () => {
                           >
                             <div>
                               <Image
-                                className="rounded-lg"
+                                className="rounded-lg mt-5"
                                 src={project.imageSrc}
                                 alt={project.imageAlt}
                                 width={1920}

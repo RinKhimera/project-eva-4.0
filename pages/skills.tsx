@@ -16,9 +16,12 @@ import postgresql from "../public/assets/postgresql.svg";
 import graphql from "../public/assets/graphql.svg";
 import adobexd from "../public/assets/adobexd.svg";
 import figma from "../public/assets/figma.svg";
+import git from "../public/assets/git.svg";
+import gitlab from "../public/assets/gitlab.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
 import { SiExpress, SiNextdotjs, SiPrisma } from "react-icons/si";
+import { AiFillGithub } from "react-icons/ai";
 
 const Projects = () => {
   const isDarkMode = useSelector(
@@ -119,6 +122,23 @@ const Projects = () => {
       icon: <Image src={adobexd} alt={""} className="w-8 h-8" />,
       name: "AdobeXD",
     },
+    {
+      href: "https://git-scm.com/",
+      icon: <Image src={git} alt={""} className="w-8 h-8" />,
+      name: "Git",
+    },
+    {
+      href: "https://github.com/",
+      icon: (
+        <AiFillGithub className="w-8 h-8 text-zinc-600 dark:text-zinc-400" />
+      ),
+      name: "GitHub",
+    },
+    {
+      href: "https://about.gitlab.com/",
+      icon: <Image src={gitlab} alt={""} className="w-8 h-8" />,
+      name: "GitLab",
+    },
   ];
 
   return (
@@ -146,6 +166,19 @@ const Projects = () => {
             <div className="mx-auto max-w-7xl lg:px-8">
               <div className="relative px-4 sm:px-8 lg:px-12">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
+                  <div className="max-w-2xl">
+                    <p className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl md:leading-tight">
+                      Things I&apos;ve made trying to put my dent in the
+                      universe.
+                    </p>
+                    <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
+                      I&apos;ve worked on tons of little projects over the years
+                      but these are the ones that I&apos;m most proud of. Many
+                      of them are open-source, so if you see something that
+                      piques your interest, check out the code and contribute if
+                      you have ideas for how it can be improved.
+                    </p>
+                  </div>
                   <div className="mt-16 sm:mt-20">
                     <div className="md:border-l md:border-zinc-300 md:pl-6 md:dark:border-zinc-500/40">
                       <div className="flex max-w-3xl flex-col space-y-16">

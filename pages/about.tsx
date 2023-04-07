@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/pages/store";
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const About = () => {
   const isDarkMode = useSelector(
@@ -64,33 +65,32 @@ const About = () => {
                       </h1>
                       <div className="mt-6 space-y-7 text-base leading-loose text-zinc-600 dark:text-zinc-400">
                         <p>
-                          I bring together my expertise in both front-end and
-                          back-end technologies to create dynamic and
-                          user-friendly web applications. With a passion for
-                          building scalable and efficient systems, I enjoy
-                          solving complex problems and implementing innovative
-                          solutions that make a difference for businesses and
-                          end-users alike.
+                          As a web developer, I enjoy bridging the gap between
+                          engineering and design — combining my technical
+                          knowledge with my keen eye for design to create a
+                          beautiful product. My goal is to always build
+                          applications that are scalable and efficient under the
+                          hood while providing engaging, pixel-perfect user
+                          experiences.
                         </p>
                         <p>
-                          In my front-end work, I focus on crafting intuitive
-                          and visually appealing interfaces that provide
-                          seamless user experiences. I am skilled in HTML, CSS,
-                          and JavaScript frameworks such as Next.js and React
-                          Native, which allow me to build responsive, dynamic,
-                          and mobile-friendly web pages. I also pay attention to
-                          accessibility and usability standards to ensure that
-                          my designs are inclusive and easy to navigate.
+                          <b>
+                            When I&apos;m not in front of my coding screen,{" "}
+                          </b>
+                          I&apos;m probably watching an anime, learning new
+                          stuff, or playing video games.
                         </p>
-                        <p>
-                          On the back-end side, I leverage my expertise in
-                          technologies such as Node.js, Express.js, and MongoDB
-                          to create scalable and efficient web applications. I
-                          have experience in building RESTful APIs and working
-                          with databases to store and retrieve data. I also pay
-                          attention to security and best practices to ensure
-                          that my applications are safe from potential attacks.
-                        </p>
+                      </div>
+                      <div>
+                        <a
+                          className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-md outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full"
+                          href="/resume.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View my resume
+                          <HiOutlineExternalLink />
+                        </a>
                       </div>
                     </div>
                     <div className="lg:pl-20">

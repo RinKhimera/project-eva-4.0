@@ -26,12 +26,8 @@ const HomeMenu = () => {
                       enthusiast
                     </h1>
                     <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-                      I&apos;m Samuel, a full-stack developer passionate about
+                      I&apos;m Samuel, a software engineer passionate about
                       creating high-quality and innovative digital solutions.
-                      With expertise in various programming languages,
-                      frameworks, and design principles, I am committed to
-                      delivering responsive, user-friendly, and aesthetically
-                      pleasing websites.
                     </p>
                     <div className="mt-6  ">
                       <Link href="/about" legacyBehavior>
