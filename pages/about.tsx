@@ -65,6 +65,13 @@ const About = () => {
                       </h1>
                       <div className="mt-6 space-y-7 text-base leading-loose text-zinc-600 dark:text-zinc-400">
                         <p>
+                          I started playing with computers when I was 10 years
+                          old. Since then I have been tinkering with all sorts
+                          of technologies that in some way or another led me to
+                          work on photo and video editing, design, and
+                          ultimately to web development.
+                        </p>
+                        <p>
                           As a web developer, I enjoy bridging the gap between
                           engineering and design — combining my technical
                           knowledge with my keen eye for design to create a

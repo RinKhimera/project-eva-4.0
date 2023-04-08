@@ -109,7 +109,7 @@ const HomeMenu = () => {
                         {projects.map((project) => (
                           <li
                             key={project.name}
-                            className="group relative flex flex-col items-start p-5 rounded-2xl transition hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
+                            className="group relative flex flex-col text-center p-5 rounded-2xl transition hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
                           >
                             <div>
                               <Image
