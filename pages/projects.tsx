@@ -15,10 +15,10 @@ const HomeMenu = () => {
   const projects = [
     {
       name: "Modern UI/UX Webpage",
-      imageSrc: "/projects/project1.jpg",
+      imageSrc: "/projects/project1.png",
       imageAlt: "Project Image",
       description:
-        "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links",
+        "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links.",
       demoLink: "https://rinkhimera.github.io/manage-landing-page/",
       githubLink: "https://github.com/RinKhimera/manage-landing-page",
     },
@@ -27,36 +27,36 @@ const HomeMenu = () => {
       imageSrc: "/projects/350x150.png",
       imageAlt: "Project Image",
       description:
-        "This is a short description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "This is a short description of Project 2. Lorem ipsum dolor sit amet, cnsectetur adipiscing elit.",
       demoLink: "#",
       githubLink: "#",
     },
     {
-      name: "Project 3",
-      imageSrc: "/projects/350x150.png",
+      name: "Random Quote Machine",
+      imageSrc: "/projects/project3.png",
       imageAlt: "Project Image",
       description:
-        "This is a short description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      demoLink: "#",
-      githubLink: "#",
+        "A web-based application random quote machine that generates and displays random quotes to the user.",
+      demoLink: "https://rinkhimera.github.io/quotes-generator/",
+      githubLink: "https://github.com/RinKhimera/quotes-generator",
     },
     {
-      name: "Project 4",
-      imageSrc: "/projects/350x150.png",
+      name: "JavaScript Calculator",
+      imageSrc: "/projects/project4.png",
       imageAlt: "Project Image",
       description:
-        "This is a short description of Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      demoLink: "#",
-      githubLink: "#",
+        "Calculator app built with JavaScript to perform simple operations and integrated with a dark mode.",
+      demoLink: "https://rinkhimera.github.io/js-calculator-v2.0/",
+      githubLink: "https://github.com/RinKhimera/js-calculator-v2.0",
     },
     {
-      name: "Project 5",
-      imageSrc: "/projects/350x150.png",
+      name: "Todo List App",
+      imageSrc: "/projects/project5.png",
       imageAlt: "Project Image",
       description:
-        "This is a short description of Project 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      demoLink: "#",
-      githubLink: "#",
+        "An application that displays a list of tasks and provides the ability to add, delete, and update tasks.",
+      demoLink: "https://rinkhimera.github.io/todo-list-app/",
+      githubLink: "https://github.com/RinKhimera/todo-list-app",
     },
     // add more projects here
   ];
