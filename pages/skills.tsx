@@ -167,8 +167,9 @@ const Projects = () => {
               <div className="relative px-4 sm:px-8 lg:px-12">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
                   <div className="max-w-2xl">
-                    <p className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl md:leading-tight">
-                      Here are some technologies I&apos;m familiar with.
+                    <p className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+                      Technologies I use, software I love, and other things I
+                      recommend.
                     </p>
                     <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
                       The main tools I use to carry out my various projects.

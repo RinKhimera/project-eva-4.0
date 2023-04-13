@@ -1,11 +1,11 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { AiFillGithub, AiFillEye } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
-import Image from "next/image";
 
 const HomeMenu = () => {
   const isDarkMode = useSelector(
