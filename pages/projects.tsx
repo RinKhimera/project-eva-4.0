@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { AiFillGithub, AiFillEye } from "react-icons/ai";
@@ -36,7 +35,7 @@ const HomeMenu = () => {
       imageSrc: "/projects/project3.png",
       imageAlt: "Project Image",
       description:
-        "A web-based application random quote machine that generates and displays random quotes to the user.",
+        "A web-based application that generates and displays random quotes to the user.",
       demoLink: "https://rinkhimera.github.io/quotes-generator/",
       githubLink: "https://github.com/RinKhimera/quotes-generator",
     },
