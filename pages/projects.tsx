@@ -1,15 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import { AiFillGithub, AiFillEye } from "react-icons/ai";
-import { useSelector } from "react-redux";
-import { RootState } from "./store";
+import Footer from "@/components/Footer"
+import NavBar from "@/components/NavBar"
+import Head from "next/head"
+import Image from "next/image"
+import { AiFillEye, AiFillGithub } from "react-icons/ai"
+import { useSelector } from "react-redux"
+import { RootState } from "./store"
 
 const HomeMenu = () => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
-  );
+  )
 
   const projects = [
     {
@@ -58,7 +58,7 @@ const HomeMenu = () => {
       githubLink: "https://github.com/RinKhimera/todo-list-app",
     },
     // add more projects here
-  ];
+  ]
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
@@ -68,7 +68,7 @@ const HomeMenu = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex h-full flex-col bg-zinc-50 dark:bg-black min-h-screen">
+      <div className="flex h-full min-h-screen flex-col bg-zinc-50 dark:bg-black">
         <div className="fixed inset-0 flex justify-center sm:px-8">
           <div className="flex w-full max-w-7xl lg:px-8">
             <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
@@ -82,7 +82,7 @@ const HomeMenu = () => {
             contact={false}
           />
           <main>
-            <div className="sm:px-8 mt-16 sm:mt-28">
+            <div className="mt-16 sm:mt-28 sm:px-8">
               <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="relative px-4 sm:px-8 lg:px-12">
                   <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -108,11 +108,11 @@ const HomeMenu = () => {
                         {projects.map((project) => (
                           <li
                             key={project.name}
-                            className="group relative flex flex-col text-center p-5 rounded-2xl transition hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
+                            className="group relative flex flex-col rounded-2xl p-5 text-center transition hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
                           >
                             <div>
                               <Image
-                                className="rounded-lg mt-5"
+                                className="mt-5 rounded-lg"
                                 src={project.imageSrc}
                                 alt={project.imageAlt}
                                 width={1920}
@@ -125,14 +125,14 @@ const HomeMenu = () => {
                             <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                               {project.description}
                             </p>
-                            <div className="w-full py-4 flex justify-evenly">
+                            <div className="flex w-full justify-evenly py-4">
                               <a
                                 href={project.githubLink}
                                 target="_blank"
                                 rel="noreferrer"
                               >
                                 <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                                  <AiFillGithub className="w-8 h-8 text-zinc-600 dark:text-zinc-400" />
+                                  <AiFillGithub className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
                                 </div>
                               </a>
                               <a
@@ -141,7 +141,7 @@ const HomeMenu = () => {
                                 rel="noreferrer"
                               >
                                 <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                                  <AiFillEye className="w-8 h-8 text-zinc-600 dark:text-zinc-400" />
+                                  <AiFillEye className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
                                 </div>
                               </a>
                             </div>
@@ -154,13 +154,13 @@ const HomeMenu = () => {
               </div>
             </div>
             <div className="mt-16 sm:mt-20"></div>
-            <div className="sm:px-8 mt-24 md:mt-28"></div>
+            <div className="mt-24 sm:px-8 md:mt-28"></div>
           </main>
           <Footer />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HomeMenu;
+export default HomeMenu

@@ -1,39 +1,39 @@
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleDarkMode } from "@/redux/darkModeReducer";
-import type { RootState } from "@/pages/store";
-import { IoSunnyOutline } from "react-icons/io5";
-import { BsMoonStars } from "react-icons/bs";
-import { IoIosArrowDown } from "react-icons/io";
+import type { RootState } from "@/pages/store"
+import { toggleDarkMode } from "@/redux/darkModeReducer"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import { BsMoonStars } from "react-icons/bs"
+import { IoIosArrowDown } from "react-icons/io"
+import { IoSunnyOutline } from "react-icons/io5"
+import { useDispatch, useSelector } from "react-redux"
 
 interface Section {
-  about: boolean;
-  skills: boolean;
-  projects: boolean;
-  contact: boolean;
+  about: boolean
+  skills: boolean
+  projects: boolean
+  contact: boolean
 }
 
 const NavBar = ({ about, skills, projects, contact }: Section) => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
-  );
-  const dispatch = useDispatch();
+  )
+  const dispatch = useDispatch()
 
   const handleToggle = () => {
-    dispatch(toggleDarkMode());
-  };
+    dispatch(toggleDarkMode())
+  }
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
   return (
     <>
       <header className="pointer-events-none relative z-50 flex flex-col">
         <div className="top-0 z-10 h-16 pt-6">
-          <div className="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full">
+          <div className="top-[var(--header-top,theme(spacing.6))] w-full sm:px-8">
             <div className="mx-auto max-w-7xl lg:px-8">
               <div className="relative px-4 sm:px-8 lg:px-12">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -45,7 +45,7 @@ const NavBar = ({ about, skills, projects, contact }: Section) => {
                             <Image
                               src="/avatar.webp"
                               alt=""
-                              className="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9"
+                              className="h-9 w-9 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
                               width={512}
                               height={512}
                               decoding="async"
@@ -68,11 +68,11 @@ const NavBar = ({ about, skills, projects, contact }: Section) => {
                         {isOpen && (
                           <div>
                             <div
-                              className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80 opacity-100"
+                              className="fixed inset-0 z-50 bg-zinc-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80"
                               onClick={toggleMenu}
                             ></div>
                             <div
-                              className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800 opacity-100 scale-100"
+                              className="fixed inset-x-4 top-8 z-50 origin-top scale-100 rounded-3xl bg-white p-8 opacity-100 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
                               tabIndex={-1}
                             >
                               <div className="flex flex-row-reverse items-center justify-between">
@@ -207,10 +207,10 @@ const NavBar = ({ about, skills, projects, contact }: Section) => {
                           type="button"
                           aria-label="Toggle dark mode"
                           onClick={handleToggle}
-                          className="group  text-pink-400 hover:text-pink-600 rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                          className="group  rounded-full bg-white/90 px-3 py-2 text-pink-400 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:text-pink-600 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                         >
                           {isDarkMode ? (
-                            <BsMoonStars className="text-lg m-0.5" />
+                            <BsMoonStars className="m-0.5 text-lg" />
                           ) : (
                             <IoSunnyOutline className="text-2xl" />
                           )}
@@ -225,7 +225,7 @@ const NavBar = ({ about, skills, projects, contact }: Section) => {
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

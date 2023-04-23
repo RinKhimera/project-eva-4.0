@@ -1,12 +1,12 @@
-import Head from "next/head";
-import HomeMenu from "../components/Home";
-import { useSelector } from "react-redux";
-import type { RootState } from "@/pages/store";
+import HomeMenu from "@/components/Home"
+import type { RootState } from "@/pages/store"
+import Head from "next/head"
+import { useSelector } from "react-redux"
 
 export default function Home() {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
-  );
+  )
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
@@ -21,5 +21,5 @@ export default function Home() {
       </Head>
       <HomeMenu />
     </div>
-  );
+  )
 }

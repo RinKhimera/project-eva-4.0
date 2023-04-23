@@ -1,16 +1,16 @@
-import Head from "next/head";
-import Image from "next/image";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import { useSelector } from "react-redux";
-import type { RootState } from "@/pages/store";
-import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import Footer from "@/components/Footer"
+import NavBar from "@/components/NavBar"
+import type { RootState } from "@/pages/store"
+import Head from "next/head"
+import Image from "next/image"
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai"
+import { HiOutlineExternalLink } from "react-icons/hi"
+import { useSelector } from "react-redux"
 
 const About = () => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
-  );
+  )
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
@@ -33,7 +33,7 @@ const About = () => {
             projects={false}
             contact={false}
           />
-          <main className="sm:px-8 mt-16 sm:mt-28">
+          <main className="mt-16 sm:mt-28 sm:px-8">
             <div className="mx-auto max-w-7xl lg:px-8">
               <div className="relative px-4 sm:px-8 lg:px-12">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -90,7 +90,7 @@ const About = () => {
                       </div>
                       <div>
                         <a
-                          className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-md outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full"
+                          className="text-md group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-zinc-50 py-2 px-3 font-medium text-zinc-900 outline-offset-2 transition hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 active:transition-none dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70"
                           href="/resume.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -109,7 +109,7 @@ const About = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <AiFillGithub className="h-6 w-6 -mt-0.5 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
+                            <AiFillGithub className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
                             <span className="ml-4">Follow on GitHub</span>
                           </a>
                         </li>
@@ -120,16 +120,16 @@ const About = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <AiFillLinkedin className="h-6 w-6 -mt-0.5 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
+                            <AiFillLinkedin className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
                             <span className="ml-4">Follow on LinkedIn</span>
                           </a>
                         </li>
-                        <li className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">
+                        <li className="mt-8 flex border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
                           <a
                             className="group flex text-sm font-medium text-zinc-800 transition hover:text-pink-600 dark:text-zinc-200 dark:hover:text-pink-600"
                             href="mailto:dixiades@gmail.com"
                           >
-                            <AiFillMail className="h-6 w-6 -mt-0.5 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
+                            <AiFillMail className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
                             <span className="ml-4">dixiades@gmail.com</span>
                           </a>
                         </li>
@@ -144,7 +144,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
