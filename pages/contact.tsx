@@ -2,7 +2,7 @@ import Footer from "@/components/Footer"
 import NavBar from "@/components/NavBar"
 import { sendContactForm } from "@/lib/api"
 import Head from "next/head"
-import { useState } from "react"
+import { FormEvent, useState } from "react"
 import { useSelector } from "react-redux"
 import { RootState } from "./store"
 
@@ -15,9 +15,13 @@ const Projects = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    await sendContactForm({ name, email, message })
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    try {
+      await sendContactForm({ name, email, message })
+    } catch (error) {
+      // handle error
+    }
   }
 
   return (
@@ -77,6 +81,7 @@ const Projects = () => {
                                 id="full_name"
                                 className="mt-1 h-10 w-full rounded border bg-gray-50 px-4"
                                 value={name}
+                                required
                                 onChange={(e: any) => setName(e.target.value)}
                               />
                             </div>
@@ -90,6 +95,7 @@ const Projects = () => {
                                 className="mt-1 h-10 w-full rounded border bg-gray-50 px-4"
                                 placeholder="email@domain.com"
                                 value={email}
+                                required
                                 onChange={(e: any) => setEmail(e.target.value)}
                               />
                             </div>
@@ -102,6 +108,7 @@ const Projects = () => {
                                 className="mt-1 h-40 w-full rounded border bg-gray-50 px-4"
                                 placeholder="Enter your comment here"
                                 value={message}
+                                required
                                 onChange={(e: any) =>
                                   setMessage(e.target.value)
                                 }
@@ -113,7 +120,6 @@ const Projects = () => {
                                 <button
                                   type="submit"
                                   className="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
-                                  onClick={handleSubmit}
                                 >
                                   Submit
                                 </button>
