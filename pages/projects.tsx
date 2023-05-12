@@ -22,13 +22,13 @@ const HomeMenu = () => {
       githubLink: "https://github.com/RinKhimera/manage-landing-page",
     },
     {
-      name: "Project 2",
-      imageSrc: "/projects/350x150.png",
+      name: "Bolo Job Search",
+      imageSrc: "/projects/project2.png",
       imageAlt: "Project Image",
       description:
         "This is a short description of Project 2. Lorem ipsum dolor sit amet, cnsectetur adipiscing elit.",
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://bolo-one.vercel.app/",
+      githubLink: "https://github.com/RinKhimera/bolo",
     },
     {
       name: "Random Quote Machine",

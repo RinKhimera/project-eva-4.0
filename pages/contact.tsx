@@ -89,7 +89,7 @@ const Projects = () => {
                       className="text-4xl font-bold tracking-tight text-zinc-800
                                dark:text-zinc-100 sm:text-5xl md:leading-tight"
                     >
-                      Here are some technologies I&apos;m familiar with.
+                      Take a coffee & chat with me.
                     </p>
                     <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
                       Get in touch or shoot me an email directly on
