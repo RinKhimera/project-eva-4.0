@@ -1,4 +1,4 @@
-import darkModeReducer from "@/redux/darkModeReducer"
+import darkModeReducer from "@/hooks/darkModeReducer"
 import { configureStore } from "@reduxjs/toolkit"
 
 export const store = configureStore({
