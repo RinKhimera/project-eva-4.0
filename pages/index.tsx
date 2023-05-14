@@ -1,15 +1,9 @@
 import HomeMenu from "@/components/Home"
-import type { RootState } from "@/pages/store"
 import Head from "next/head"
-import { useSelector } from "react-redux"
 
 export default function Home() {
-  const isDarkMode = useSelector(
-    (state: RootState) => state.darkMode.isDarkMode
-  )
-
   return (
-    <div className={isDarkMode ? "dark" : ""}>
+    <div>
       <Head>
         <title>
           Samuel Pokam - Software engineer, web developer, and JavaScript
