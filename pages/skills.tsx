@@ -196,7 +196,7 @@ const Projects = () => {
                         </div>
                       </div>
                       <div className="relative z-10 order-first mt-1 mb-3 hidden items-center text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:block">
-                        Frontend techs
+                        Languages and main frameworks
                       </div>
                     </section>
                     <section className="md:grid md:grid-cols-4 md:items-baseline">

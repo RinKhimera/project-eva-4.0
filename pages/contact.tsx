@@ -57,7 +57,7 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Skills - Samuel Pokam</title>
+        <title>Contact - Samuel Pokam</title>
         <meta name="description" content="Samuel Pokam - Portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -148,7 +148,7 @@ const Projects = () => {
                             name="email"
                             id="email"
                             className="mt-1 h-40 w-full rounded border bg-gray-50 px-4"
-                            placeholder="Hello, I think we need a front-end developer who is proficient in Tailwind CSS. How soon can we discuss this?"
+                            placeholder="Hello, we need a front-end developer who is proficient in Tailwind CSS. How soon can we discuss this?"
                             value={message}
                             required
                             onChange={(e: any) => setMessage(e.target.value)}

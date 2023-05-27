@@ -6,48 +6,63 @@ const HomeMenu = () => {
   const projects = [
     {
       name: "Modern UI/UX Webpage",
-      imageSrc: "/projects/project1.png",
+      imageSrc: "/assets/projects/project1.png",
       imageAlt: "Project Image",
       description:
         "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links.",
       demoLink: "https://rinkhimera.github.io/manage-landing-page/",
       githubLink: "https://github.com/RinKhimera/manage-landing-page",
+      stacks: ["React", "Tailwind CSS", "JavaScript"],
     },
     {
       name: "Bolo Job Search",
-      imageSrc: "/projects/project2.png",
+      imageSrc: "/assets/projects/bolo.png",
       imageAlt: "Project Image",
       description:
-        "This is a short description of Project 2. Lorem ipsum dolor sit amet, cnsectetur adipiscing elit.",
+        "A job search website allowing to apply and post different offers, as well as to offer services.",
       demoLink: "https://bolo-one.vercel.app/",
       githubLink: "https://github.com/RinKhimera/bolo",
+      stacks: ["Figma", "Git", "Next.js", "TypeScript", "Three.js"],
+    },
+    {
+      name: "Promptopia",
+      imageSrc: "/assets/projects/promptopia.png",
+      imageAlt: "Project Image",
+      description:
+        "An open-source AI prompting tool for modern world to discover, create and share creative prompts.",
+      demoLink: "https://promptopia-rinkhimera.vercel.app/",
+      githubLink: "https://github.com/RinKhimera/promptopia",
+      stacks: ["Next.js", "TypeScript", "MongoDB", "Prisma", "NextAuth.js"],
     },
     {
       name: "Random Quote Machine",
-      imageSrc: "/projects/project3.png",
+      imageSrc: "/assets/projects/project3.png",
       imageAlt: "Project Image",
       description:
         "A web-based application that generates and displays random quotes to the user.",
       demoLink: "https://rinkhimera.github.io/quotes-generator/",
       githubLink: "https://github.com/RinKhimera/quotes-generator",
+      stacks: ["React", "Axios", "JavaScript", "API fetching"],
     },
     {
       name: "JavaScript Calculator",
-      imageSrc: "/projects/project4.png",
+      imageSrc: "/assets/projects/project4.png",
       imageAlt: "Project Image",
       description:
         "Calculator app built with JavaScript to perform simple operations and integrated with a dark mode.",
       demoLink: "https://rinkhimera.github.io/js-calculator-v2.0/",
       githubLink: "https://github.com/RinKhimera/js-calculator-v2.0",
+      stacks: ["React", "JavaScript"],
     },
     {
       name: "Todo List App",
-      imageSrc: "/projects/project5.png",
+      imageSrc: "/assets/projects/project5.png",
       imageAlt: "Project Image",
       description:
         "An application that displays a list of tasks and provides the ability to add, delete, and update tasks.",
       demoLink: "https://rinkhimera.github.io/todo-list-app/",
       githubLink: "https://github.com/RinKhimera/todo-list-app",
+      stacks: ["React", "JavaScript", "API's fetching", "GitLab"],
     },
     // add more projects here
   ]
@@ -80,29 +95,39 @@ const HomeMenu = () => {
                 <div className="mt-8 sm:mt-10">
                   <ul
                     role="list"
-                    className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-3"
+                    className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3"
                   >
                     {projects.map((project) => (
                       <li
                         key={project.name}
-                        className="group relative flex flex-col rounded-2xl p-5 text-center transition hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
+                        className="group relative flex flex-col rounded-2xl bg-zinc-50 p-5 text-center transition hover:bg-zinc-100 dark:bg-zinc-800/50 dark:hover:bg-zinc-700/50"
                       >
                         <div>
                           <Image
-                            className="mt-5 rounded-lg"
+                            className="mt-2 mb-4 rounded-lg"
                             src={project.imageSrc}
                             alt={project.imageAlt}
                             width={1920}
                             height={1080}
                           />
                         </div>
-                        <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                        <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
                           {project.name}
                         </h2>
                         <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                           {project.description}
                         </p>
-                        <div className="flex w-full justify-evenly py-4">
+                        <div className="flex flex-wrap justify-center  gap-2 py-3">
+                          {project.stacks.map((stack) => (
+                            <div
+                              key={stack}
+                              className="rounded-lg bg-white px-2 py-1 text-sm font-semibold text-zinc-800 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:text-zinc-100 dark:ring-0"
+                            >
+                              {stack}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex w-full justify-evenly">
                           <a
                             href={project.githubLink}
                             target="_blank"

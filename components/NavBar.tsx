@@ -1,9 +1,9 @@
-import { toggleDarkMode } from "@/hooks/darkModeReducer"
+import { setSystemDarkMode, toggleDarkMode } from "@/hooks/darkModeReducer"
 import type { RootState } from "@/pages/store"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { BsMoonStars } from "react-icons/bs"
 import { IoIosArrowDown } from "react-icons/io"
 import { IoSunnyOutline } from "react-icons/io5"
@@ -18,6 +18,13 @@ const NavBar = () => {
   const handleToggle = () => {
     dispatch(toggleDarkMode())
   }
+
+  useEffect(() => {
+    const prefersDarkMode =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    dispatch(setSystemDarkMode(prefersDarkMode))
+  }, [])
 
   const pathname = usePathname()
 
