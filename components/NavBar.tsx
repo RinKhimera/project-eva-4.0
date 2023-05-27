@@ -24,7 +24,7 @@ const NavBar = () => {
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     dispatch(setSystemDarkMode(prefersDarkMode))
-  }, [])
+  }, [dispatch])
 
   const pathname = usePathname()
 

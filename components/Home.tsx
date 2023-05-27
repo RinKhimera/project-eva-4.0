@@ -1,9 +1,21 @@
+import anime from "animejs"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect } from "react"
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai"
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md"
 
 const HomeMenu = () => {
+  useEffect(() => {
+    // scripts animation
+    anime({
+      targets: ".anime",
+      translateX: 20,
+      loop: true,
+      direction: "alternate",
+    })
+  }, [])
+
   return (
     <>
       <div className="mt-16 sm:mt-28 sm:px-8">
@@ -18,11 +30,11 @@ const HomeMenu = () => {
                   I&apos;m Samuel, a software engineer passionate about creating
                   high-quality and innovative digital solutions.
                 </p>
-                <div className="mt-6  ">
+                <div className="mt-6">
                   <Link href="/about" legacyBehavior>
                     <a className="flex items-center text-2xl font-bold tracking-tight text-zinc-800 hover:underline dark:text-zinc-100 sm:text-3xl">
                       Let me introduce myself{" "}
-                      <MdOutlineKeyboardDoubleArrowRight className="ml-4 -mb-1" />
+                      <MdOutlineKeyboardDoubleArrowRight className="anime ml-4 -mb-1" />
                     </a>
                   </Link>
                 </div>
