@@ -10,7 +10,7 @@ const HomeMenu = () => {
     // scripts animation
     anime({
       targets: ".anime",
-      translateX: 20,
+      translateX: 30,
       loop: true,
       direction: "alternate",
     })
@@ -126,7 +126,6 @@ const HomeMenu = () => {
           </div>
         </div>
       </div>
-      <div className="mt-24 sm:px-8 md:mt-28"></div>
     </>
   )
 }

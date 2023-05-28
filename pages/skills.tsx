@@ -167,7 +167,7 @@ const Projects = () => {
                           >
                             <span className="h-4 w-0.5 rounded-full bg-zinc-800 dark:bg-zinc-100"></span>
                           </span>
-                          Frontend techs
+                          Languages and main frameworks
                         </div>
                         <div className="flex flex-col items-start gap-2">
                           <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">

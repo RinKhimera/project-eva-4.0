@@ -22,7 +22,7 @@ const HomeMenu = () => {
         "A job search website allowing to apply and post different offers, as well as to offer services.",
       demoLink: "https://bolo-one.vercel.app/",
       githubLink: "https://github.com/RinKhimera/bolo",
-      stacks: ["Figma", "Git", "Next.js", "TypeScript", "Three.js"],
+      stacks: ["Figma", "Git", "Node.js", "TypeScript", "Next.js", "Three.js"],
     },
     {
       name: "Promptopia",
@@ -35,6 +35,16 @@ const HomeMenu = () => {
       stacks: ["Next.js", "TypeScript", "MongoDB", "Prisma", "NextAuth.js"],
     },
     {
+      name: "Portfolio Website",
+      imageSrc: "/assets/projects/portfolio.png",
+      imageAlt: "Project Image",
+      description:
+        "My personal portfolio website, to share my projects and my skills in the field of web development.",
+      demoLink: "#",
+      githubLink: "https://github.com/RinKhimera/project-eva-4.0",
+      stacks: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "Nodemailer"],
+    },
+    {
       name: "Random Quote Machine",
       imageSrc: "/assets/projects/project3.png",
       imageAlt: "Project Image",
@@ -45,16 +55,6 @@ const HomeMenu = () => {
       stacks: ["React", "Axios", "JavaScript", "API fetching"],
     },
     {
-      name: "JavaScript Calculator",
-      imageSrc: "/assets/projects/project4.png",
-      imageAlt: "Project Image",
-      description:
-        "Calculator app built with JavaScript to perform simple operations and integrated with a dark mode.",
-      demoLink: "https://rinkhimera.github.io/js-calculator-v2.0/",
-      githubLink: "https://github.com/RinKhimera/js-calculator-v2.0",
-      stacks: ["React", "JavaScript"],
-    },
-    {
       name: "Todo List App",
       imageSrc: "/assets/projects/project5.png",
       imageAlt: "Project Image",
@@ -62,7 +62,7 @@ const HomeMenu = () => {
         "An application that displays a list of tasks and provides the ability to add, delete, and update tasks.",
       demoLink: "https://rinkhimera.github.io/todo-list-app/",
       githubLink: "https://github.com/RinKhimera/todo-list-app",
-      stacks: ["React", "JavaScript", "API's fetching", "GitLab"],
+      stacks: ["React", "JavaScript", "Express", "GitLab"],
     },
     // add more projects here
   ]
@@ -155,8 +155,6 @@ const HomeMenu = () => {
             </div>
           </div>
         </div>
-        <div className="mt-16 sm:mt-20"></div>
-        <div className="mt-24 sm:px-8 md:mt-28"></div>
       </div>
     </>
   )
