@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer"
 import Navigation from "@/components/Navigation"
-import { RootState } from "@/pages/store"
+import { RootState } from "@/config/store"
 import { useSelector } from "react-redux"
 
 export default function Layout({ children }: { children: React.ReactNode }) {

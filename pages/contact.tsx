@@ -5,7 +5,7 @@ import { BiLoaderCircle } from "react-icons/bi"
 import { useSelector } from "react-redux"
 import { Flip, ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import { RootState } from "./store"
+import { RootState } from "../config/store"
 
 const Contact = () => {
   const isDarkMode = useSelector(

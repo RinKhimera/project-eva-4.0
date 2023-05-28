@@ -1,5 +1,5 @@
+import type { RootState } from "@/config/store"
 import { setSystemDarkMode, toggleDarkMode } from "@/hooks/darkModeReducer"
-import type { RootState } from "@/pages/store"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
