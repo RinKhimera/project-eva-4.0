@@ -2,7 +2,7 @@ import Head from "next/head"
 import Image from "next/image"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
 
-const HomeMenu = () => {
+const Project = () => {
   const projects = [
     {
       name: "Modern UI/UX Webpage",
@@ -160,4 +160,4 @@ const HomeMenu = () => {
   )
 }
 
-export default HomeMenu
+export default Project

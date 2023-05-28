@@ -9,7 +9,7 @@ import { IoIosArrowDown } from "react-icons/io"
 import { IoSunnyOutline } from "react-icons/io5"
 import { useDispatch, useSelector } from "react-redux"
 
-const NavBar = () => {
+const Navigation = () => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
   )
@@ -225,4 +225,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Navigation

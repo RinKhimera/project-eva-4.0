@@ -19,7 +19,7 @@ import Image from "next/image"
 import { AiFillGithub } from "react-icons/ai"
 import { SiExpress, SiNextdotjs, SiPrisma } from "react-icons/si"
 
-const Projects = () => {
+const Skills = () => {
   const frontendIcons = [
     {
       href: "https://www.javascript.com/",
@@ -293,4 +293,4 @@ const Projects = () => {
     </>
   )
 }
-export default Projects
+export default Skills

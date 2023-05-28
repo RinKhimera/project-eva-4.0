@@ -7,7 +7,7 @@ import { Flip, ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { RootState } from "./store"
 
-const Projects = () => {
+const Contact = () => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
   )
@@ -182,4 +182,4 @@ const Projects = () => {
     </>
   )
 }
-export default Projects
+export default Contact
