@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
 import { RootState } from "@/pages/store"
 import { useSelector } from "react-redux"
+import Navbar from "./Navbar"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const isDarkMode = useSelector(
