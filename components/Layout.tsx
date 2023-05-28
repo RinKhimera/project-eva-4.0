@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer"
+import NavBar from "@/components/Navbar"
 import { RootState } from "@/pages/store"
 import { useSelector } from "react-redux"
-import Navbar from "./Navbar"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const isDarkMode = useSelector(
@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
           </div>
         </div>
-        <Navbar />
+        <NavBar />
         <main>{children}</main>
         <Footer />
       </div>
