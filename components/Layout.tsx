@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer"
-import Navigation from "@/components/Navbar"
+import Navigation from "@/components/Navigation"
 import { RootState } from "@/pages/store"
 import { useSelector } from "react-redux"
 
