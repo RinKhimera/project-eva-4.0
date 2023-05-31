@@ -32,6 +32,14 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+
+  const menuItems = [
+    { href: "/about", label: "About" },
+    { href: "/skills", label: "Technologies & Skills" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ]
+
   return (
     <header className="pointer-events-none relative z-50 flex flex-col">
       <div className="top-0 z-10 h-16 pt-6">
@@ -106,28 +114,17 @@ const Navigation = () => {
                             </div>
                             <nav className="mt-6">
                               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                                <li>
-                                  <Link href="/about" legacyBehavior>
-                                    <a className="block py-2">About</a>
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/skills" legacyBehavior>
-                                    <a className="block py-2">
-                                      Technologies & Skills
-                                    </a>
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/projects" legacyBehavior>
-                                    <a className="block py-2">Projects</a>
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/contact" legacyBehavior>
-                                    <a className="block py-2">Contact</a>
-                                  </Link>
-                                </li>
+                                {menuItems.map((item) => (
+                                  <li key={item.href}>
+                                    <Link
+                                      href={item.href}
+                                      className="block py-2"
+                                      onClick={toggleMenu}
+                                    >
+                                      {item.label}
+                                    </Link>
+                                  </li>
+                                ))}
                               </ul>
                             </nav>
                           </div>
